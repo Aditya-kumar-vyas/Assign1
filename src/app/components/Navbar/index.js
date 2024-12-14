@@ -20,7 +20,7 @@ export default function Navbar() {
           <button
             className="text-white p-2 rounded bg-gray-700 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500"
             onClick={(e) => {
-              e.stopPropagation(); // Prevent click propagation
+              e.stopPropagation(); 
               setIsSidebarOpen(!isSidebarOpen);
             }}
             aria-label="Toggle Sidebar"
