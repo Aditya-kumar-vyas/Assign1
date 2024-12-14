@@ -4,7 +4,7 @@ import { useState } from "react";
 export default function Navbar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  // Function to handle clicks outside the sidebar
+ 
   const handleOutsideClick = (e) => {
     if (!e.target.closest("#sidebar") && isSidebarOpen) {
       setIsSidebarOpen(false);
@@ -13,10 +13,10 @@ export default function Navbar() {
 
   return (
     <div className="relative" onClick={handleOutsideClick}>
-      {/* Navbar */}
+    
       <nav className="bg-gray-800 text-white p-4 flex justify-between items-center">
         <div className="flex items-center space-x-4">
-          {/* Sidebar Toggle Button */}
+        
           <button
             className="text-white p-2 rounded bg-gray-700 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500"
             onClick={(e) => {
@@ -25,7 +25,7 @@ export default function Navbar() {
             }}
             aria-label="Toggle Sidebar"
           >
-            {/* Inline SVG for Menu Icon */}
+           
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"
@@ -50,7 +50,7 @@ export default function Navbar() {
         </ul>
       </nav>
 
-      {/* Sidebar */}
+     
       {isSidebarOpen && (
         <div
           id="sidebar"
@@ -65,7 +65,7 @@ export default function Navbar() {
         </div>
       )}
 
-      {/* Overlay */}
+    
       {isSidebarOpen && (
         <div className="fixed inset-0 bg-black opacity-50 z-40"></div>
       )}
